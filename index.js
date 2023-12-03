@@ -1,7 +1,7 @@
 const express=require('express');
 var cors=require('cors')
 const app=express();
-const port=5000;
+const port=process.env.port||5000;
 const connectToMongo=require('./db');
 // const mongoURI="mongodb://localhost:27017/notebook";
 // const mongoURI="mongodb+srv://someshgupta9234:somesh@91@cluster1.95fp9ij.mongodb.net/"
