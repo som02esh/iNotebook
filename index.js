@@ -15,4 +15,4 @@ app.use('/api/notes',require('./routes/notes'));
 app.listen(port,()=>{
     console.log(`it is listening at ${port}`);
 })
-connectToMongo("mongodb+srv://someshgupta9234:somesh%4091@cluster1.95fp9ij.mongodb.net/notebook");
+connectToMongo(process.env.dbUrl);
