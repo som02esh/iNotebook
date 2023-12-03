@@ -1,7 +1,8 @@
 const express=require('express');
+require("dotenv").config();
 var cors=require('cors')
 const app=express();
-const port=5000;
+const port=process.env.port || 5000;
 const connectToMongo=require('./db');
 // const mongoURI="mongodb://localhost:27017/notebook";
 // const mongoURI="mongodb+srv://someshgupta9234:somesh@91@cluster1.95fp9ij.mongodb.net/"
@@ -15,4 +16,4 @@ app.use('/api/notes',require('./routes/notes'));
 app.listen(port,()=>{
     console.log(`it is listening at ${port}`);
 })
-connectToMongo("mongodb+srv://someshgupta9234:somesh%4091@cluster1.95fp9ij.mongodb.net/notebook");
+connectToMongo(process.env.dburl);
