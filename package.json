@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app",
-<<<<<<< HEAD
     "start": "node index.js",
-=======
-    "start":"node index.js",
->>>>>>> 97ec1061b02cd9b6797512f1c9df2452f25b22ba
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
